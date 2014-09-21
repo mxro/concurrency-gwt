@@ -4,7 +4,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<artifactId>concurrency-gwt</artifactId>
 	<groupId>de.mxro.concurrency.gwt</groupId>
-	<version>0.0.3-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<description>GWT wrappers for basic JRE concurrency classes.</description>
 	<url>https://github.com/mxro/concurrency-gwt</url>
 	<properties>
@@ -363,9 +363,9 @@
 	</developers>
 
 	<scm>
-		<connection>scm:git:git@github.com:mxro/concurrency-api.git</connection>
-		<url>https://github.com/mxro/concurrency-api</url>
-		<developerConnection>scm:git:git@github.com:mxro/concurrency-api.git
+		<connection>scm:git:git@github.com:mxro/concurrency-gwt.git</connection>
+		<url>https://github.com/mxro/concurrency-gwt</url>
+		<developerConnection>scm:git:git@github.com:mxro/concurrency-gwt.git
 		</developerConnection>
 	</scm>
 	
