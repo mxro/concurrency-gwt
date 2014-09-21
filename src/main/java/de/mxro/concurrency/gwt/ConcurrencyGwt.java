@@ -2,9 +2,9 @@ package de.mxro.concurrency.gwt;
 
 import de.mxro.concurrency.Concurrency;
 
-public class GwtConcurrency {
+public class ConcurrencyGwt {
 
-    public static Concurrency newGwtConcurrency() {
+    public static Concurrency create() {
         return new GwtConcurrencyImpl();
     }
 
