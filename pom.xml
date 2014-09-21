@@ -201,6 +201,7 @@
 							<configuration>
 								<links>
 									<link>http://modules.appjangle.com/factories/latest/apidocs/</link>
+									<link>http://modules.appjangle.com/concurrency-api/latest/apidocs/</link>
 								</links>
 							</configuration>
 						</plugin>
