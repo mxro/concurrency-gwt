@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2011 Max Erik Rohde http://www.mxro.de All rights reserved. -->
+<module rename-to='gwtconcurrency'>
+	
+	<inherits name='de.mxro.concurrency.Concurrency' />
+
+	<!-- Specify the paths for translatable code -->
+	<source path=''>
+		<exclude name="**/jre/**" />
+	</source>
+
+
+</module>
