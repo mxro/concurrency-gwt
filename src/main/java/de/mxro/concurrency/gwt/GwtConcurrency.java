@@ -21,6 +21,12 @@ import de.mxro.concurrency.wrappers.SimpleExecutor;
 import de.mxro.concurrency.wrappers.SimpleLock;
 import de.mxro.concurrency.wrappers.SimpleTimer;
 
+/**
+ * GWT implementation of basic concurrency classes.
+ * 
+ * @author <a href="http://www.mxro.de">Max Rohde</a>
+ *
+ */
 public final class GwtConcurrency implements Concurrency {
     private static final Object THREAD = new Object();
 
