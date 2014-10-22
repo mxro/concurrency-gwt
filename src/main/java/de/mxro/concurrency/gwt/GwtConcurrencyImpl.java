@@ -10,6 +10,7 @@ import java.util.Queue;
 import java.util.Set;
 
 import com.google.gwt.user.client.Timer;
+import com.google.gwt.user.client.Window;
 
 import de.mxro.concurrency.Concurrency;
 import de.mxro.concurrency.factories.CollectionFactory;
@@ -80,6 +81,8 @@ public final class GwtConcurrencyImpl implements Concurrency {
         };
     }
 
+    private final static String USER_AGENT = Window.Navigator.getUserAgent();
+
     @Override
     public ExecutorFactory newExecutor() {
 
@@ -87,6 +90,7 @@ public final class GwtConcurrencyImpl implements Concurrency {
 
             @Override
             public SimpleExecutor newSingleThreadExecutor(final Object owner) {
+
                 return new SimpleExecutor() {
 
                     @Override
