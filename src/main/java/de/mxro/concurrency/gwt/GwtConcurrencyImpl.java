@@ -9,6 +9,8 @@ import java.util.Map;
 import java.util.Queue;
 import java.util.Set;
 
+import com.google.gwt.core.client.Scheduler;
+import com.google.gwt.core.client.Scheduler.ScheduledCommand;
 import com.google.gwt.user.client.Timer;
 
 import de.mxro.concurrency.Concurrency;
@@ -37,6 +39,7 @@ public final class GwtConcurrencyImpl implements Concurrency {
 
             @Override
             public SimpleTimer scheduleOnce(final int when, final Runnable runnable) {
+
                 final Timer timer = new Timer() {
 
                     @Override
@@ -97,7 +100,13 @@ public final class GwtConcurrencyImpl implements Concurrency {
 
                     @Override
                     public Object execute(final Runnable runnable) {
-                        runnable.run();
+                        Scheduler.get().scheduleDeferred(new ScheduledCommand() {
+
+                            @Override
+                            public void execute() {
+                                runnable.run();
+                            }
+                        });
                         // newTimer().scheduleOnce(1, runnable);
                         return THREAD; // only one Thread in JS
                     }
