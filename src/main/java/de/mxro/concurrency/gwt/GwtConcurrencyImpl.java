@@ -10,6 +10,7 @@ import java.util.Queue;
 import java.util.Set;
 
 import com.google.gwt.user.client.Timer;
+import com.google.gwt.user.client.Window;
 
 import de.mxro.concurrency.Concurrency;
 import de.mxro.concurrency.factories.CollectionFactory;
@@ -81,6 +82,8 @@ public final class GwtConcurrencyImpl implements Concurrency {
         };
     }
 
+    public final static boolean IS_CHROME = Window.Navigator.getUserAgent().toLowerCase().contains("chrome");
+
     @Override
     public ExecutorFactory newExecutor() {
 
@@ -98,15 +101,13 @@ public final class GwtConcurrencyImpl implements Concurrency {
 
                     @Override
                     public Object execute(final Runnable runnable) {
-                        /*
-                         * Scheduler.get().scheduleDeferred(new
-                         * ScheduledCommand() {
-                         * 
-                         * @Override public void execute() { runnable.run(); }
-                         * });
-                         */
-                        // runnable.run();
-                        newTimer().scheduleOnce(1, runnable);
+                        final int delay;
+                        if (IS_CHROME) {
+                            delay = 0;
+                        } else {
+                            delay = 1;
+                        }
+                        newTimer().scheduleOnce(delay, runnable);
                         return THREAD; // only one Thread in JS
                     }
 
