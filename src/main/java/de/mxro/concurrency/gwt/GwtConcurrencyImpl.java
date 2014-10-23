@@ -101,13 +101,14 @@ public final class GwtConcurrencyImpl implements Concurrency {
 
                     @Override
                     public Object execute(final Runnable runnable) {
-                        final int delay;
-                        if (IS_CHROME) {
-                            delay = 0;
-                        } else {
-                            delay = 1;
-                        }
-                        newTimer().scheduleOnce(delay, runnable);
+                        /*
+                         * final int delay; if (IS_CHROME) { delay = 0; } else {
+                         * delay = 1; } newTimer().scheduleOnce(delay,
+                         * runnable);
+                         */
+
+                        runnable.run();
+
                         return THREAD; // only one Thread in JS
                     }
 
