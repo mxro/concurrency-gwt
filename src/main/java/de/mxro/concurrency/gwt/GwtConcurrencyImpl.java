@@ -10,7 +10,6 @@ import java.util.Queue;
 import java.util.Set;
 
 import com.google.gwt.user.client.Timer;
-import com.google.gwt.user.client.Window;
 
 import de.mxro.concurrency.Concurrency;
 import de.mxro.concurrency.factories.CollectionFactory;
@@ -82,7 +81,8 @@ public final class GwtConcurrencyImpl implements Concurrency {
         };
     }
 
-    public final static boolean IS_CHROME = Window.Navigator.getUserAgent().toLowerCase().contains("chrome");
+    // public final static boolean IS_CHROME =
+    // Window.Navigator.getUserAgent().toLowerCase().contains("chrome");
 
     @Override
     public ExecutorFactory newExecutor() {
