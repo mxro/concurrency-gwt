@@ -105,8 +105,8 @@ public final class GwtConcurrencyImpl implements Concurrency {
                          * @Override public void execute() { runnable.run(); }
                          * });
                          */
-                        runnable.run();
-                        // newTimer().scheduleOnce(1, runnable);
+                        // runnable.run();
+                        newTimer().scheduleOnce(1, runnable);
                         return THREAD; // only one Thread in JS
                     }
 
