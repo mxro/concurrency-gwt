@@ -1,5 +1,15 @@
 package de.mxro.concurrency.gwt;
 
+import delight.concurrency.Concurrency;
+import delight.concurrency.factories.CollectionFactory;
+import delight.concurrency.factories.ExecutorFactory;
+import delight.concurrency.factories.TimerFactory;
+import delight.concurrency.wrappers.SimpleAtomicBoolean;
+import delight.concurrency.wrappers.SimpleAtomicInteger;
+import delight.concurrency.wrappers.SimpleExecutor;
+import delight.concurrency.wrappers.SimpleLock;
+import delight.concurrency.wrappers.SimpleTimer;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -10,16 +20,6 @@ import java.util.Queue;
 import java.util.Set;
 
 import com.google.gwt.user.client.Timer;
-
-import de.mxro.concurrency.Concurrency;
-import de.mxro.concurrency.factories.CollectionFactory;
-import de.mxro.concurrency.factories.ExecutorFactory;
-import de.mxro.concurrency.factories.TimerFactory;
-import de.mxro.concurrency.wrappers.SimpleAtomicBoolean;
-import de.mxro.concurrency.wrappers.SimpleAtomicInteger;
-import de.mxro.concurrency.wrappers.SimpleExecutor;
-import de.mxro.concurrency.wrappers.SimpleLock;
-import de.mxro.concurrency.wrappers.SimpleTimer;
 
 /**
  * GWT implementation of basic concurrency classes.

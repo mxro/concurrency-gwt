@@ -2,7 +2,7 @@
 <!-- Copyright 2011 Max Erik Rohde http://www.mxro.de All rights reserved. -->
 <module rename-to='gwtconcurrency'>
 	
-	<inherits name='de.mxro.concurrency.Concurrency' />
+	<inherits name='delight.concurrency.Concurrency' />
 
 	<!-- Specify the paths for translatable code -->
 	<source path=''>

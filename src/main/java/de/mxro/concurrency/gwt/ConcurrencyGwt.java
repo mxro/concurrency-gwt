@@ -1,8 +1,8 @@
 package de.mxro.concurrency.gwt;
 
+import delight.concurrency.Concurrency;
 import delight.factories.Factory;
 
-import de.mxro.concurrency.Concurrency;
 import de.mxro.concurrency.gwt.internal.GwtConcurrencyFactory;
 
 public class ConcurrencyGwt {
