@@ -1,3 +1,6 @@
+** MOVED **: This project has moved to [javadelight/delight-concurrency-gwt](https://github.com/javadelight/delight-concurrency-gwt)
+
+
 concurrency-gwt
 ===============
 
